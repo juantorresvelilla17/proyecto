@@ -12,10 +12,9 @@ app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 
 //Routes
-
 app.use(require('./routes/index'));
-app.use('/admin/producto',require('./routes/movies'));
-app.use('/admin/producto/{sku}',require('./routes/movies'));
+app.use('/admin/productos',require('./routes/metodos'));
+app.use('/admin/producto/{sku}',require('./routes/metodos'));
 
 //Iniciando el servidor
 app.listen(app.get('port'),()=>{
